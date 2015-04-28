@@ -4,3 +4,16 @@
  * Before writing in this file, look if there is not
  * already a Bootstrap SCSS variable that does the same job
  * ------------------------------------- */
+
+.container {
+  position: relative;
+}
+
+.wrap {
+  background: white;
+}
+
+// tchret : hauteur toujours au max pour être mobile friendly
+.wrap, html, body {
+  height: 100%;
+}

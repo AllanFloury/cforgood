@@ -11,10 +11,72 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427114234) do
+ActiveRecord::Schema.define(version: 20150427152015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "business_labels", force: :cascade do |t|
+    t.integer  "business_id"
+    t.integer  "label_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "business_labels", ["business_id"], name: "index_business_labels_on_business_id", using: :btree
+  add_index "business_labels", ["label_id"], name: "index_business_labels_on_label_id", using: :btree
+
+  create_table "businesses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "street"
+    t.string   "zipcode"
+    t.string   "city"
+    t.string   "url"
+    t.string   "picture"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.string   "telephone"
+  end
+
+  add_index "businesses", ["category_id"], name: "index_businesses_on_category_id", using: :btree
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "labels", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "perk_requests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "perk_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "perk_requests", ["perk_id"], name: "index_perk_requests_on_perk_id", using: :btree
+  add_index "perk_requests", ["user_id"], name: "index_perk_requests_on_user_id", using: :btree
+
+  create_table "perks", force: :cascade do |t|
+    t.string   "title"
+    t.text     "details"
+    t.string   "state"
+    t.integer  "business_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "perks", ["business_id"], name: "index_perks_on_business_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -29,9 +91,21 @@ ActiveRecord::Schema.define(version: 20150427114234) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "street"
+    t.string   "zipcode"
+    t.string   "city"
+    t.string   "picture"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "business_labels", "businesses"
+  add_foreign_key "business_labels", "labels"
+  add_foreign_key "businesses", "categories"
+  add_foreign_key "perk_requests", "perks"
+  add_foreign_key "perk_requests", "users"
+  add_foreign_key "perks", "businesses"
 end
