@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get 'perks/destroy'
 
   devise_for :users
+
+  resources :perks, only: [:index, :show]
 end
