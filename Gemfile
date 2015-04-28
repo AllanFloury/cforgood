@@ -24,6 +24,7 @@ gem "font-awesome-sass"
 gem "rails-i18n"
 gem "devise-i18n"
 gem "devise-i18n-views"
+gem 'activeadmin', github: 'activeadmin'
 
 gem "geocoder"
 gem "gmaps4rails"

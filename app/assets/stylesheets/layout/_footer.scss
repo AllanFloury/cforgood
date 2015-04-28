@@ -1,6 +1,32 @@
 // Your footer style
 .footer {
   background: rgb(144, 238, 223);
-  position: relative;
-  height: 60px;
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+
+  img {
+    height: 75%;
+    margin: auto;
+    display: block;
+  }
+
+  ul {
+    height: 60px;
+
+    li {
+      height: 100%;
+      padding-left: 28px;
+      margin-top: 5px;
+
+      p {
+        font-size: 11px;
+         color: rgb(90, 147, 138);
+         text-align: center;
+      }
+    }
+  }
 }
