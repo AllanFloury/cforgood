@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150428140030) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -57,9 +56,9 @@ ActiveRecord::Schema.define(version: 20150428140030) do
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
     t.string   "telephone"
-    t.string   "email"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "email"
   end
 
   add_index "businesses", ["category_id"], name: "index_businesses_on_category_id", using: :btree
@@ -116,9 +115,7 @@ ActiveRecord::Schema.define(version: 20150428140030) do
     t.string   "zipcode"
     t.string   "city"
     t.string   "picture"
-
     t.boolean  "admin",                  default: false, null: false
-
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
