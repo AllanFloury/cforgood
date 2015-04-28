@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'businesses/index'
+
+  get 'businesses/show'
+
+  get 'businesses/create'
+
+  get 'businesses/new'
+
+  get 'businesses/edit'
+
+  get 'businesses/update'
+
+  get 'businesses/destroy'
+
   get 'perks/index'
 
   get 'perks/show'

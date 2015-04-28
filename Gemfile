@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+source 'https://rails-assets.org'
 
 ruby "2.2.0"
 
@@ -13,6 +14,7 @@ gem "pundit"
 gem "paperclip"
 gem "aws-sdk", "< 2.0"
 
+gem 'coffee-rails'
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0"
 gem "uglifier"
@@ -24,8 +26,11 @@ gem "devise-i18n"
 gem "devise-i18n-views"
 
 gem "geocoder"
+gem "gmaps4rails"
+gem "rails-assets-underscore"
 
 group :development, :test do
+  gem "faker"
   gem "spring"
   gem "annotate"
   gem "binding_of_caller"
