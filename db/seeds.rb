@@ -25,3 +25,5 @@ require 'faker'
     longitude:   Faker::Address.longitude
   )
 end
+
+

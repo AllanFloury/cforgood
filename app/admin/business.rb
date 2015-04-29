@@ -3,7 +3,6 @@ form do |f|
     f.inputs "Identity" do
       f.input :name
       f.input :email
-      f.input :category_id
       f.input :description
       f.input :street
       f.input :zipcode

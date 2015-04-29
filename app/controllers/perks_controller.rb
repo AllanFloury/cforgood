@@ -10,6 +10,7 @@ class PerksController < ApplicationController
   end
 
   def show
+    authorize @perk
   end
 
 
