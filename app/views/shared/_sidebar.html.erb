@@ -19,17 +19,17 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item"><%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path %></a>
-    <a class="sidebar-nav-item"><%= link_to t(".sign_in", default: "Sign in"), new_user_session_path %></a>
-    <a class="sidebar-nav-item"><%= link_to "Connect with Facebook", user_omniauth_authorize_path(:facebook) %></a>
-    <a class="sidebar-nav-item"><%= link_to destroy_user_session_path, method: :delete do %>
+    <div class="sidebar-nav-item"><%= link_to t(".sign_up", default: "Home"), new_user_registration_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "My Profile", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "Notifications", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "Perks", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "My Card", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "About", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "Become A Partner", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fa fa-sign-out"></i>
       <%= t ".sign_out", default: "Sign out" %>
-    <% end %></a>
-    <a class="sidebar-nav-item">Download</a>
-    <a class="sidebar-nav-item">Download</a>
-    <a class="sidebar-nav-item">Download</a>
-    <a class="sidebar-nav-item">Download</a>
+    <% end %></div>
 
     <span class="sidebar-nav-item">Moins important</span>
   </nav>
