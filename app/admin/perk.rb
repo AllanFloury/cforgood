@@ -1,4 +1,5 @@
 ActiveAdmin.register Perk do
+
   form do |f|
     f.inputs "Identity" do
       f.input :title

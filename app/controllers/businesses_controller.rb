@@ -1,28 +1,22 @@
 class BusinessesController < ApplicationController
   def index
+    skip_policy_scope
     @businesses = Business.all
-    @businesses_location = business.near(params[:city].capitalize, 20)
     @markers = Gmaps4rails.build_markers(@businesses) do |business, marker|
       marker.lat business.latitude
       marker.lng business.longitude
     end
   end
 
+
+
+ # authorize @business for other actions
+
   def show
+    authorize @business
   end
 
-  def create
-  end
-
-  def new
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+  def business_params
+      params.require(:business).permit(:title, :description, :address, :latitude, :longitude)
   end
 end
