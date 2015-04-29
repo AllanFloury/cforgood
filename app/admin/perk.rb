@@ -1,5 +1,5 @@
 ActiveAdmin.register Perk do
-  permit_params :title, :details, :state, :id_business
+  permit_params :title, :details, :state, :business_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
