@@ -10,6 +10,26 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+    # ActiveAdmin::Dashboards.build do
+    #   section "Inactive users" do
+    #     table do
+
+    #     end
+    #   end
+
+    #   section "Deleted posts" do
+    #     table do
+
+    #     end
+    #   end
+
+    #   section "Latest comments" do
+    #     table do
+
+    #     end
+    #   end
+    # end
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

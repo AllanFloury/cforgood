@@ -12,7 +12,9 @@ class PerksController < ApplicationController
   def show
   end
 
+
   def perk_params
     params.require(:perk).permit(:title, :details, :state, :business_id)
   end
+
 end

@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
+  layout "home", if: :devise_controller?
+
+  before_action :authenticate_user!
   include Pundit
 
   protect_from_forgery with: :exception
-
-  before_action :authenticate_user!, unless: :pages_controller?
 
   after_action :verify_authorized,    except: :index, unless: :devise_or_pages_or_admin_controller?
   after_action :verify_policy_scoped, only: :index, unless: :devise_or_pages_or_admin_controller?

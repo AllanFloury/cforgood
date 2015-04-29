@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 20150428153409) do
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
     t.string   "telephone"
+    t.string   "email"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "email"
   end
 
   add_index "businesses", ["category_id"], name: "index_businesses_on_category_id", using: :btree
