@@ -10,7 +10,7 @@ class PerksController < ApplicationController
   end
 
   def show
-    authorize @perk
+    skip_authorization
   end
 
 

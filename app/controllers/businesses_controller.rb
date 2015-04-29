@@ -14,8 +14,7 @@ class BusinessesController < ApplicationController
  # authorize @business for other actions
 
   def show
-    skip_policy_scope
-    authorize @business
+    skip_authorization
   end
 
   def business_params
