@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  layout "home", if: :devise_controller?
+  before_action :set_layout
 
   before_action :authenticate_user!
   include Pundit
@@ -12,6 +12,14 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
+
+  def set_layout
+    if devise_controller?
+      self.class.layout "home"
+    else
+      self.class.layout "application"
+    end
+  end
 
   def admin_controller?
     controller_path.start_with?('admin/')
