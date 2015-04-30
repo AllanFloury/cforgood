@@ -8,7 +8,7 @@
 require 'faker'
 
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-10.times do
+1.times do
   Business.create!(
     name:        Faker::Company.name,
     description: Faker::Lorem.sentence(word_count = 20, supplemental = false, random_words_to_add = 10),
