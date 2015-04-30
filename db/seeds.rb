@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
@@ -35,6 +36,7 @@ Business.create!({
 
 
 
+
 1.times do
   Business.create!(
     name:        Faker::Company.name,
@@ -52,4 +54,5 @@ Business.create!({
     longitude:   Faker::Address.longitude
   )
 end
+
 

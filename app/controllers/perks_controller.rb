@@ -10,7 +10,21 @@ class PerksController < ApplicationController
   end
 
   def show
+    @perk = Perk.find(params[:id])
     skip_authorization
+  end
+
+  def edit
+    @perk = Perk.find(params[:id])
+  end
+
+  def update
+     @perk = Perk.find(params[:id])
+     @perk.state = true
+     @perk.save
+     authorize @perk
+     redirect_to perks_path
+     flash[:notice] = "Vous pouvez maintenant bénéficier de #{@perk.title}"
   end
 
 
