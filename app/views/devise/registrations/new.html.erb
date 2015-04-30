@@ -11,8 +11,10 @@
       <div class="form-design text-center">
         <p class="inline"> Already a member ?</p>
         <%= link_to t(".sign_in", :default => " Sign in"), new_session_path(resource_name) %>
-      <h2 class="text-center padding-bottom-20"></h2
+
+      <h2 class="text-center padding-bottom-20"></h2>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
         <div class="form-group">
           <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
         </div>

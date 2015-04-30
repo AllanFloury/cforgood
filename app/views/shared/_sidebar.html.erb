@@ -20,11 +20,11 @@
 
   <nav class="sidebar-nav">
     <div class="sidebar-nav-item"><%= link_to t(".sign_up", default: "Home"), new_user_registration_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "My Profile", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "Notifications", new_user_session_path %></div>
     <div class="sidebar-nav-item"><%= link_to "Perks", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "My Card", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "Businesses", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "My Favorite Perks", new_user_session_path %></div>
     <div class="sidebar-nav-item"><%= link_to "About", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><%= link_to "Parameters", new_user_session_path %></div>
     <div class="sidebar-nav-item"><%= link_to "Become A Partner", new_user_session_path %></div>
     <div class="sidebar-nav-item"><%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fa fa-sign-out"></i>
