@@ -10,32 +10,7 @@
     <div class="row text-center">
       <h1>Perks</h1>
     </div>
-    <div class="row" style="padding-left: 10px;">
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-          <% @perks.each do |perk| %>
-            <%= link_to perk_path(perk), target: '_blank' do %>
-              <div class="col-xs-6 text-center perk-card padding-card-elements">
-                <div class="row text-center">
-                  <%= image_tag "logo.png" %>
-                </div>
-                <div class="row">
-                  <div class="col-xs-3">
-                    <%= image_tag perk.user.picture, class: "img-circle reverse-margin img-border" %>
-                  </div>
-                  <div class="col-xs-6 padding-top">
-                    <p><%= perk.title.first(20) %></p>
-                    <p><%= perk.business.city%></p>
-                  </div>
-                  <div class="col-xs-3">
-                    <div class="price-background reverse-margin-price">
-                      <%= perk.details %>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <%end%>
-          <%end%>
-        </div>
+    <!--  -->
     </div>
   </div>
 </div>
