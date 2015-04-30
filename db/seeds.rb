@@ -5,9 +5,36 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'faker'
+
 
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Business.create!({
+  name: "Le Dindon en Laisse",
+  description: "Resto Bio",
+  street: "18 Rue Beautreillis",
+  zipcode: "75004",
+  city: "Paris"
+})
+
+Business.create!({
+  name: "MyFreeKitchen",
+  description: "Sans Gluten",
+  street: "1 Bis Rue Bleue Paris",
+  zipcode: "75009",
+  city: "Paris"
+})
+Business.create!({
+  name: "La Verierre",
+  description: "Sans Gluten",
+  street: "24 avenue de Tourville",
+  zipcode: "75007",
+  city: "Paris"
+})
+
+
+
 1.times do
   Business.create!(
     name:        Faker::Company.name,
@@ -25,3 +52,4 @@ require 'faker'
     longitude:   Faker::Address.longitude
   )
 end
+

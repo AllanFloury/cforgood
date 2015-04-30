@@ -1,0 +1,12 @@
+<div id="map_box">
+  <%#= image_tag business.picture.url(:medium), style: 'width: 80%;' %>
+  <div class="row element-padding">
+    <div class="col-xs-6">
+      <p><strong><%= business.name.first(30) %>...</strong><br>
+      description: <%= business.description %></p>
+    </div>
+    <div class="col-xs-6">
+      <%= link_to "More details", business, class: 'btn btn-success', id: 'btn-map-box' %>
+    </div>
+  </div>
+</div>
