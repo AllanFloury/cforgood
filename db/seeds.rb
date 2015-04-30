@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'faker'
 
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
 1.times do
   Business.create!(
     name:        Faker::Company.name,
@@ -25,3 +25,5 @@ require 'faker'
     longitude:   Faker::Address.longitude
   )
 end
+
+
