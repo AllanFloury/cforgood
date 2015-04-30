@@ -1,5 +1,5 @@
 ActiveAdmin.register Business do
-form do |f|
+  form do |f|
     f.inputs "Identity" do
       f.input :name
       f.input :email

@@ -21,8 +21,6 @@ class BusinessesController < ApplicationController
     # end
   end
 
-
-
  # authorize @business for other actions
 
   def show

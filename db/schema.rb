@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430125853) do
+ActiveRecord::Schema.define(version: 20150430133354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,17 +48,20 @@ ActiveRecord::Schema.define(version: 20150430125853) do
     t.string   "zipcode"
     t.string   "city"
     t.string   "url"
-    t.string   "picture"
     t.string   "facebook"
     t.string   "twitter"
     t.string   "instagram"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "category_id"
     t.string   "telephone"
     t.string   "email"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   add_index "businesses", ["category_id"], name: "index_businesses_on_category_id", using: :btree
@@ -114,13 +117,16 @@ ActiveRecord::Schema.define(version: 20150430125853) do
     t.string   "street"
     t.string   "zipcode"
     t.string   "city"
-    t.string   "picture"
     t.boolean  "admin",                  default: false, null: false
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
     t.string   "token"
     t.datetime "token_expiry"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
