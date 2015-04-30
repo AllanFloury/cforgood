@@ -11,4 +11,8 @@ class Business < ActiveRecord::Base
   def address
     "#{street}, #{zipcode} #{city}"
   end
+
+  def gmaps4rails_infowindow
+      "#{link_to 'Business' , business_path}"
+  end
 end

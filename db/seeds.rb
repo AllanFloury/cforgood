@@ -9,13 +9,13 @@
 
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  Business.create!({
-    name: "Le Dindon en Laisse",
-    description: "Resto Bio",
-    street: "18 Rue Beautreillis",
-    zipcode: "75004",
-    city: "Paris"
-  })
+Business.create!({
+  name: "Le Dindon en Laisse",
+  description: "Resto Bio",
+  street: "18 Rue Beautreillis",
+  zipcode: "75004",
+  city: "Paris"
+})
 
 Business.create!({
   name: "MyFreeKitchen",
