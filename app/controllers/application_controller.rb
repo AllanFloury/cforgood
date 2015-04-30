@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
   def set_layout
     if devise_controller?
       self.class.layout "home"
+    elsif admin_controller?
+      return
     else
       self.class.layout "application"
     end

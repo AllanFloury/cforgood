@@ -10,9 +10,8 @@
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= "#{controller_path.gsub('/', '_')}_#{action_name}" %>">
   <%#= render "shared/navbar" %>
-  <%= render "shared/flashes" %>
   <%= render "shared/sidebar" %>
 
   <nav class='nav-bar'>
@@ -21,6 +20,10 @@
       <%= image_tag "logo.png" %>
     </a>
   </nav>
+  <div class="margin-0">
+    <%= image_tag "barre_navbar.png"%>
+  </div>
+  <%= render "shared/flashes" %>
 
   <div class="wrap">
     <%= yield %>
