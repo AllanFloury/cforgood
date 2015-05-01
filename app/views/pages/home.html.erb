@@ -1,17 +1,24 @@
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h1>Welcome!</h1>
-      <h2>Découvrez les derniers bons plans</h2> -->
 <div id="wrapper">
   <div class="container-fluid">
     <div class="row text-center">
       <h1>Home</h1>
       <h4>Découvrez les bons plans à l'affiche</h4>
-    </div>
-    <!--  -->
+      <div class="your-class">
+        <% @perks.each do |perk| %>
+          <%= link_to perk_path(perk) do %>
+              <div class="row relative" id="perk-image" style="background-image: url(<%= image_url "Perk1.jpg" %>); background-position: center center">
+                <div class="row perk-business-name">
+                  <p class="mt-5"><%= perk.business.name.upcase %></p>
+                  <div class="row perk-title">
+                    <p><%= perk.title.upcase %></p>
+                  </div>
+                </div>
+              </div>
+            <%end%>
+          <%end%>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

@@ -4,7 +4,7 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree ./app
-
+//= require vendor/slick.js
 
 // Please do not put any code in here. Create a new .js file in
 // app/assets/javascripts/app instead, and put your code there

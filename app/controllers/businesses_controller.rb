@@ -1,6 +1,8 @@
 class BusinessesController < ApplicationController
   def index
     skip_policy_scope
+    @perks = Perk.all
+
     @businesses = Business.all
     # @businesses = Business.near(params[:address], 20)
     @markers = Gmaps4rails.build_markers(@businesses) do |business, marker|
