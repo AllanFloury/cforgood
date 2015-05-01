@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
   end
 
+
   def edit
     @user = User.find(params[:id])
   end
@@ -16,4 +17,5 @@ class UsersController < ApplicationController
   def perk_params
     params.require(:user).permit(:first_name, :last_name, :email, :picture)
   end
+
 end

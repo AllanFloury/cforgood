@@ -1,0 +1,45 @@
+.perk-card {
+  height: 100px;
+  color: black;
+  opacity: 0.8;
+  &:hover{
+    transition: all 0.2s ease;
+    opacity: 1;
+    transform: scale(1.01);
+    }
+}
+
+.perk-title {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  padding-left: 15px;
+  background: rgba(0, 190, 255, 0.8);
+  color: white;
+}
+
+.perk-business-name {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  border-radius: 2px;
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(240, 240, 240);
+}
+
+#perk-image {
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 4px solid rgb(200, 200, 200);
+}
+
+h1 {
+  margin: 0;
+}

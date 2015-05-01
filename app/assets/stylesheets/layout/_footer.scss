@@ -9,18 +9,21 @@
   height: 70px;
 
   img {
-    height: 75%;
+    height: 35px;
+    width: 40px;
     margin: auto;
     display: block;
   }
 
   ul {
     height: 60px;
+    padding-left: 15px;
+    margin-top: 5px;
 
     li {
       height: 100%;
       margin-left: 10px;
-      padding-right: 10px;
+      padding-right: 6px;
       margin-top: 5px;
 
       p {

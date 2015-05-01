@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   def home
     @perks = Perk.all
+
+    skip_authorization
+
   end
 
   def about

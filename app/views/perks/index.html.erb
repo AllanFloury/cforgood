@@ -3,12 +3,12 @@
     <div class="row text-center">
       <h1>Perks</h1>
     </div>
-      <div class="row"s>
+      <div class="row">
           <div class="col-xs-10 col-xs-offset-1 perk-card">
             <% @perks.each do |perk| %>
               <%= link_to perk_path(perk), target: '_blank' do %>
-                  <div class="row relative" id="perk-image">
-                    <%= image_tag "Perk1.jpg" %>
+                  <div class="row relative" id="perk-image" style="background-image: url(<%= image_url "Perk1.jpg" %>); background-position: center center">
+
                     <div class="row perk-business-name">
                         <p class="mt-5"><%= perk.business.name.upcase %></p>
                     <div class="row perk-title">
@@ -18,6 +18,10 @@
                 </div>
               <%end%>
             <%end%>
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> master
         </div>
   </div>
 </div>

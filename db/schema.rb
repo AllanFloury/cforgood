@@ -92,9 +92,9 @@ ActiveRecord::Schema.define(version: 20150430133354) do
     t.string   "title"
     t.text     "details"
     t.integer  "business_id"
-    t.datetime "created_at",                  null:    false
-    t.datetime "updated_at",                  null:    false
-    t.boolean  "state",                       default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "state",       default: false
   end
 
   add_index "perks", ["business_id"], name: "index_perks_on_business_id", using: :btree
