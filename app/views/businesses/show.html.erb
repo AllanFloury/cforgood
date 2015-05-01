@@ -1,2 +1,22 @@
-<h1>Businesses#show</h1>
-<p>Find me in app/views/businesses/show.html.erb</p>
+
+<div id="wrapper">
+  <div class="container-fluid">
+    <div class="row" id="bottom-padded">
+      <div class="row text-center">
+        <h2><%= @business.name.upcase %></h2>
+        <p><%= @business.city %></p>
+        <div class="col-xs-10 col-xs-offset-1">
+
+          <div id="biz-image">
+            <%= image_tag "Perk6.jpg"%>
+          </div>
+
+          <%#=image_tag @business.picture.url(:medium), class: "img-circle" %>
+          <h2><strong> <%= @business.perks.last.title %> </strong></h2>
+          <p> <%= @business.city %> </p>
+          <%= link_to "bénificiez de ce bon paln", perk_path, class: "btn btn-primary"%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

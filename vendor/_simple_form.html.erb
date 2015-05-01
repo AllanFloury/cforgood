@@ -26,4 +26,29 @@
   </div>
 <% end %>
 
+<p>Find me in app/views/businesses/show.html.erb</p>
+<div id="wrapper">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <h1><%=#@business.name.upcase%></h1>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <% @businesses.each do |business| %>
+          <%= link_to business_path(business), target: '_blank' do %>
+            <div class="row relative" id="business-image">
+              <%= image_tag "business1.jpg" %>
+              <div class="row">
+                  <p class="mt-5"><%= business.name.upcase %></p>
+                <div class="row">
+                  <p><%= business.description %></p>
+                </div>
+              </div>
+              <%end%>
+            <%end%>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
 
