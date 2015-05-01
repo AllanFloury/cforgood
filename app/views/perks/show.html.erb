@@ -1,4 +1,21 @@
-<h1>Perks#show</h1>
-<p>Find me in app/views/perks/show.html.erb</p>
+<div id="wrapper">
+  <div class="container-fluid">
+    <div class="row" id="bottom-padded">
+      <div class="row text-center">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div id="perk-image">
+          <%= image_tag "http://placehold.it/350x130" %>
+          </div>
+          <div class= "perk-card">
+            <h2><%= @perk.title %></h2>
+            <p><%= @perk.details %></p>
+            <%= render 'validation'%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= render 'validation' %>
+
+

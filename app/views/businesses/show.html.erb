@@ -14,7 +14,7 @@
           <%#=image_tag @business.picture.url(:medium), class: "img-circle" %>
           <h2><strong> <%= @business.perks.last.title %> </strong></h2>
           <p> <%= @business.city %> </p>
-          <%= link_to "bénificiez de ce bon paln", perk_path(@business.perk_id), class: "btn btn-primary"%>
+          <%= link_to "bénificiez de ce bon paln", perk_path, class: "btn btn-primary"%>
         </div>
       </div>
     </div>
