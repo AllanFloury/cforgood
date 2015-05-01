@@ -1,16 +1,18 @@
 ActiveAdmin.register Perk do
 
-  form do |f|
+  permit_params :title, :details, :state, :picture, :business_id
+
+  form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Identity" do
       f.input :title
       f.input :details
       f.input :state
-      f.input :business_id
+      f.input :picture, :as => :file
+      f.input :business
     end
     f.actions
   end
 
-  permit_params :title, :details, :state, :business_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
