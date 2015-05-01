@@ -24,6 +24,11 @@ class BusinessesController < ApplicationController
  # authorize @business for other actions
 
   def show
+    @business = Business.find(params[:id])
+    @markers = Gmaps4rails.build_markers(@business) do |business, marker|
+      marker.lat business.latitude
+      marker.lng business.longitude
+    end
     skip_authorization
   end
 
