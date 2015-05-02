@@ -1,0 +1,78 @@
+.perk-image {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+}
+
+.box-white-perk {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  height: 200px;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  color: rgb(80, 80, 80);
+  border-radius: 5px;
+}
+
+.box-shadow-perk {
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgb(240, 240, 240);
+  z-index: 2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  z-index: 2;
+  h2 {
+    color: white;
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+}
+
+.box-color-perk {
+  height: 30px;
+  width: 100%;
+  color: white;
+  z-index: 2;
+  font-size: 20px;
+  padding-top: 2px;
+  margin-bottom: 8px;
+  h1 {
+    color: white;
+    font-weight: 600;
+    padding: 2px;
+  }
+}
+
+.plr-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.address_field {
+  margin-bottom: 20px;
+  float: left;
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding-left: 10px;
+  }
+}
+
+.tel_field {
+  margin-bottom: 20px;
+  float: right;
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding-right: 10px;
+  }
+}
+
+  .fa {
+    font-size: 12px;
+  }
