@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def my_business
+  def partner
   end
 
   def perk_params
