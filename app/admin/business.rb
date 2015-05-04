@@ -2,13 +2,14 @@ ActiveAdmin.register Business do
   form do |f|
     f.inputs "Identity" do
       f.input :name
+      f.input :category
       f.input :email
       f.input :description
       f.input :street
       f.input :zipcode
       f.input :city
       f.input :telephone
-      f.input :category
+      f.input :picture, :as => :file
     end
     f.actions
   end
