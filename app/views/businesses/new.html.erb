@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="form-design text-center">
+      <h2>Ajouter Mon Commerce</h2>
+      <br>
+
+      <%= simple_form_for @business do |f| %>
+
+        <div class="form-group">
+          <%= f.text_field :name, autofocus: true, placeholder: "Nom", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :description, autofocus: true, placeholder: "Description", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :street, placeholder: "Adresse", autocomplete: "off", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :zipcode, placeholder: "Code Postal", autocomplete: "off", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :city, placeholder: "Ville", autocomplete: "off", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :telephone, autofocus: true, placeholder: "Téléphone", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <div class="fileUpload btn btn-primary">
+            <span>Télécharger votre logo  <i class="fa fa-file-o"></i></span>
+            <input type="file" class="upload" name="user[picture]"/>
+          </div>
+        </div>
+
+        <div class="col-xs-8 col-xs-offset-2 mb-80"><%= f.submit t('.update', :default => "Valider"), class: "btn btn-success" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

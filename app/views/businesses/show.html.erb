@@ -1,22 +1,36 @@
-
-<div id="wrapper">
-  <div class="container-fluid">
-    <div class="row" id="bottom-padded">
-      <div class="row text-center">
-        <h2><%= @business.name.upcase %></h2>
-        <p><%= @business.city %></p>
-        <div class="col-xs-10 col-xs-offset-1">
-
-          <div id="biz-image">
-            <%= image_tag "Perk6.jpg"%>
-          </div>
-
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-xs-12 box-white-business" style="background-image: url(<%= image_url "Perk5.png" %>); background-position: center center">
+      <div class="box-shadow-business">
+        <div class="col-xs-3">
+          <%= image_tag "footer_icon.png", class: "business-logo"%>
+        </div>
+        <div class="col-xs-7 pt-10 pl-5">
+          <h4><%= @business.name.upcase %></h4>
+          <p><%=@business.street%>, <%=@business.city.capitalize %></p>
+          <p><i class="fa fa-tag"></i> Restaurant<%=@business.category_id%></p>
           <%#=image_tag @business.picture.url(:medium), class: "img-circle" %>
-          <h2><strong> <%= @business.perks.last.title %> </strong></h2>
-          <p> <%= @business.city %> </p>
-          <%= link_to "bénificiez de ce bon paln", perk_path, class: "btn btn-primary"%>
+        </div>
+        <div class="col-xs-2 pt-10 pl-5 fa-40">
+          <p><i class="fa fa-map-marker"></i></br><strong>930 m</strong></p>
         </div>
       </div>
+    </div>
+    <div class="col-xs-12 plr-10 size-11">
+      <%= @business.description %>
+    </div>
+    <div class="col-xs-12 perk-card-business">
+      <% @business.perks.each do |perk| %>
+        <%= link_to perk_path(perk) do %>
+          <div class="row relative bg-image-80" style="background-image: url(<%= image_url "Perk1.png" %>); background-position: center center">
+              <div class="row box-color-business" style="background-image: url(<%= image_url "colorbar-inverse.png" %>); background-position: center center"></div>
+               <div class="index-5 top-55 pl-15 font-white">
+                <p><%= perk.title.upcase %></p>
+              </div>
+              <div class="box-shadow-over-business"></div>
+          </div>
+        <%end%>
+      <%end%>
     </div>
   </div>
 </div>

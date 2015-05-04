@@ -19,19 +19,16 @@
   </div>
 
   <nav class="sidebar-nav">
-    <div class="sidebar-nav-item"><%= link_to t(".sign_up", default: "Home"), new_user_registration_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "Perks", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "Businesses", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "My Favorite Perks", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "About", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "Parameters", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to "Add My Business", new_user_session_path %></div>
-    <div class="sidebar-nav-item"><%= link_to destroy_user_session_path, method: :delete do %>
-      <i class="fa fa-sign-out"></i>
-      <%= t ".sign_out", default: "Sign out" %>
+    <div class="sidebar-nav-item"><i class="fa fa-home"></i><%= link_to "Accueil", root_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-tag"></i><%= link_to "Bons Plans", perks_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-users"></i><%= link_to "Commerces", businesses_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-star"></i><%= link_to "Mes Favoris", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-cog"></i><%= link_to "Paramètres", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-user-plus"></i><%= link_to "Devenir Partenaire", partner_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-info-circle"></i><%= link_to "A Propos", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-sign-out"></i><%= link_to destroy_user_session_path, method: :delete do %>
+      <%= t ".sign_out", default: "Se Déconnecter" %>
     <% end %></div>
-
-    <span class="sidebar-nav-item">Moins important</span>
   </nav>
 
   <div class="sidebar-item">

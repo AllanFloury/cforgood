@@ -34,7 +34,15 @@ class BusinessesController < ApplicationController
     skip_authorization
   end
 
+  def new
+    @business = Business.new
+    skip_authorization
+  end
+
+  def create
+  end
+
   def business_params
-      params.require(:business).permit(:title, :description, :city  , :address, :latitude, :longitude)
+      params.require(:business).permit(:title, :description, :city, :zipcode, :street, :address, :latitude, :longitude)
   end
 end
