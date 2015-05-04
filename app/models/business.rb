@@ -1,6 +1,7 @@
 class Business < ActiveRecord::Base
   has_many     :perks
-  geocoded_by :address
+  belongs_to   :category
+  geocoded_by  :address
 
   has_attached_file :picture,
     styles: { medium: "500x100>", thumb: "100x100>" }

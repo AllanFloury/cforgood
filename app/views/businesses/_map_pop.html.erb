@@ -3,7 +3,8 @@
   <div class="row element-padding">
     <div class="col-xs-6">
       <p><strong><%= business.name.first(30) %>...</strong><br>
-      description: <%= business.description %></p>
+      <%= business.categories.title %><br>
+      <%= business.perks.count %></p>
     </div>
     <div class="col-xs-6">
       <%= link_to "More details", business, class: 'btn btn-success', id: 'btn-map-box' %>
