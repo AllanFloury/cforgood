@@ -12,8 +12,4 @@ class PagesController < ApplicationController
 
   def partner
   end
-
-  def perk_params
-    params.require(:perk).permit(:title, :details, :state, :business_id)
-  end
 end

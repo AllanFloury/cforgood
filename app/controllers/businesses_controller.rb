@@ -40,6 +40,7 @@ class BusinessesController < ApplicationController
   end
 
   def create
+
   end
 
   def business_params
