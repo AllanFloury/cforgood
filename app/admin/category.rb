@@ -1,19 +1,12 @@
-ActiveAdmin.register Business do
+ActiveAdmin.register Category do
   form do |f|
     f.inputs "Identity" do
-      f.input :name
-      f.input :email
-      f.input :description
-      f.input :street
-      f.input :zipcode
-      f.input :city
-      f.input :telephone
-      f.input :category
+      f.input :title
     end
     f.actions
   end
 
-  permit_params :name, :email, :category_id, :description, :street, :zipcode, :city, :telephone
+permit_params :title
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
