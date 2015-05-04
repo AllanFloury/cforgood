@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501122417) do
+ActiveRecord::Schema.define(version: 20150503142238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20150501122417) do
     t.string   "facebook"
     t.string   "twitter"
     t.string   "instagram"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.integer  "category_id"
     t.string   "telephone"
     t.string   "email"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20150501122417) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.boolean  "authenticate",         default: false
   end
 
   add_index "businesses", ["category_id"], name: "index_businesses_on_category_id", using: :btree

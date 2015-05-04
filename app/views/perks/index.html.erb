@@ -1,24 +1,36 @@
+<div id="wrapper-perks">
 <div class="container-fluid">
   <div class="row text-center">
-    Filters
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Filtrer <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
   </div>
-  <br>
   <div class="row">
-    <div class="col-xs-12perk-card">
+    <div class="col-xs-12 perk-card">
       <% @perks.each do |perk| %>
         <%= link_to perk_path(perk) do %>
           <div class="row relative bg-image-100" style="background-image: url(<%= image_url "Perk1.png" %>); background-position: center center">
             <div class="row box-shadow-absolute">
               <p class="mt-5"><%= perk.business.name.upcase %></p>
               <div class="row box-color-absolute" style="background-image: url(<%= image_url "colorbar-inverse.png" %>); background-position: center center"></div>
-               <div class="index-5">
+               <div class="index-5 top-90">
                 <p><%= perk.title.upcase %></p>
               </div>
-              <div class="box-shadow"></div>
+              <div class="box-shadow-over"></div>
             </div>
           </div>
         <%end%>
       <%end%>
+    </div>
     </div>
   </div>
 </div>

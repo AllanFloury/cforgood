@@ -6,3 +6,131 @@
   height: 100px;
   width: 100%;
 }
+
+.business-logo {
+  position: absolute;
+  top:0;
+  left:0;
+  float: left;
+  padding-left: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.box-white-business {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  height: 150px;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  color: rgb(80, 80, 80);
+  margin-bottom: 15px;
+  p {
+    font-size: 12px;
+    margin-bottom: 0px;
+    float: left;
+  }
+  h4 {
+    font-size: 20px;
+    margin: 0px;
+  }
+  strong {
+    color: white;
+  }
+}
+
+.size-12 {
+  font-size: 12px;
+}
+
+.fa-40 {
+  .fa {
+    font-size: 40px;
+  }
+  }
+
+.box-shadow-business {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgb(240, 240, 240);
+  z-index: 2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-top: 2px;
+  text-align: center;
+  z-index: 2;
+  h2 {
+    color: white;
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+}
+
+.box-shadow-over-business{
+  position:absolute;
+  top: 55px;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  background-color: rgba(80,80,80,0.1);
+  color: white;
+  z-index: 3;
+}
+
+.absolute1 {
+  position: absolute;
+  z-index: 1;
+  height: 150px;
+  width: 100%;
+}
+
+.box-color-business {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  color: white;
+  z-index: 2;
+  font-size: 20px;
+  padding-top: 2px;
+}
+
+.perk-card-business {
+  color: black;
+  opacity: 1;
+  background: white;
+  border-radius: 5px;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 70px;
+}
+
+.bg-image-80 {
+  height: 80px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.top-55 {
+  position: absolute;
+  top: 55px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.font-white {
+  color: white;
+}
+
+.size-11 {
+  font-size: 11px;
+}

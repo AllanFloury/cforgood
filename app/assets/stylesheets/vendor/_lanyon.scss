@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   border-right:  1px solid rgba(0, 0, 0, 0.04);
-  color: rgba(255,255,255,.6);
+  color: rgba(243,252,255,.6);
   background-color: #93B7BE;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
@@ -169,6 +169,11 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: .5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
+  padding-left: 30px;
+  .fa {
+    font-size: 22px;
+    width: 30px;
+  }
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
