@@ -21,6 +21,6 @@ class Business < ActiveRecord::Base
   end
 
   def gmaps4rails_infowindow
-      "#{link_to 'Business' , business_path}"
+    "#{link_to 'Business', business_path}"
   end
 end
