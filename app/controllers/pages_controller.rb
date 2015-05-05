@@ -12,4 +12,8 @@ class PagesController < ApplicationController
 
   def partner
   end
+
+  def mycard
+    skip_authorization
+  end
 end

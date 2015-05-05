@@ -9,11 +9,11 @@
     <% if user_signed_in? %>
       <% if current_user.picture.nil? %>
         <%= image_tag current_user.picture.url(:medium), class: "img-circle" %>
-        <%= current_user.first_name %>
-        <%= current_user.last_name %>
+        <p><%= current_user.first_name %>
+        <%= current_user.last_name %></p>
       <% else %>
         <%= image_tag current_user.picture, class: "img-circle" %>
-        <%= current_user.name %>
+        <p><%= current_user.name %></p>
       <% end %>
     <% end %>
   </div>
@@ -22,7 +22,7 @@
     <div class="sidebar-nav-item"><i class="fa fa-home"></i><%= link_to "Accueil", root_path %></div>
     <div class="sidebar-nav-item"><i class="fa fa-tag"></i><%= link_to "Bons Plans", perks_path %></div>
     <div class="sidebar-nav-item"><i class="fa fa-users"></i><%= link_to "Commerces", businesses_path %></div>
-    <div class="sidebar-nav-item"><i class="fa fa-star"></i><%= link_to "Mes Favoris", new_user_session_path %></div>
+    <div class="sidebar-nav-item"><i class="fa fa-cart-arrow-down"></i><%= link_to "Mon Panier", new_user_session_path %></div>
     <div class="sidebar-nav-item"><i class="fa fa-cog"></i><%= link_to "Paramètres", new_user_session_path %></div>
     <div class="sidebar-nav-item"><i class="fa fa-user-plus"></i><%= link_to "Devenir Partenaire", partner_path %></div>
     <div class="sidebar-nav-item"><i class="fa fa-info-circle"></i><%= link_to "A Propos", new_user_session_path %></div>

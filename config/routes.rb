@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "contact", to: "pages#contact"
   get "partner", to: "pages#partner"
+  get "mycard", to: "pages#mycard"
 
   ActiveAdmin.routes(self)
 
