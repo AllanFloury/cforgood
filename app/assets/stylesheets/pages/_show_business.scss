@@ -9,7 +9,7 @@
 
 .business-logo {
   position: absolute;
-  top:0;
+  top:5px;
   left:0;
   float: left;
   padding-left: 5px;
@@ -34,6 +34,9 @@
   h4 {
     font-size: 20px;
     margin: 0px;
+    color: white;
+    float: left;
+    font-weight: 500;
   }
   strong {
     color: white;

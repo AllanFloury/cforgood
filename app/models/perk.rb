@@ -1,5 +1,6 @@
 class Perk < ActiveRecord::Base
   belongs_to :business
+  has_many :perk_requests
 
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }

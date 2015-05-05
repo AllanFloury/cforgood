@@ -1,0 +1,34 @@
+#pages_mycard {
+  #wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+  .card {
+    position: relative;
+    top: -80px;
+  }
+  .card h2{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    left: 50%;
+    width: 200px;
+    line-height: 50px;
+    margin-left: -160px;
+    line-height: 50px;
+    top: 50%;
+    margin-top: 51px;
+    transform: rotate(90deg);
+  }
+  .card .img-circle {
+    width: 80px;
+    position: relative;
+    top: 200px;
+    left: -55px;
+    z-index: 1;
+    transform: rotate(90deg);
+  }
+  .card {
+    margin-top: -20px;
+  }

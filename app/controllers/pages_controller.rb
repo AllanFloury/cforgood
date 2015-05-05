@@ -10,10 +10,10 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def my_business
+  def partner
   end
 
-  def perk_params
-    params.require(:perk).permit(:title, :details, :state, :business_id)
+  def mycard
+    skip_authorization
   end
 end
