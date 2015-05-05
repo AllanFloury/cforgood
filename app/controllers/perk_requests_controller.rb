@@ -2,7 +2,7 @@ class PerkRequestsController < ApplicationController
   before_action :find_perk
 
   def index
-    @perk_request = PerkRequest.all
+    @perk_requests = policy_scope(perk_request)
   end
 
   def show
@@ -18,6 +18,7 @@ class PerkRequestsController < ApplicationController
     @perk_request = PerkRequest.new
     @perk_request.perk = @perk
     @perk_request.user = current_user
+    authorize @perk_request
     if @perk_request.save
       redirect_to perk_perk_request_path(@perk, @perk_request)
     else
