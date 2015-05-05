@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: 'registrations' }
 
   resources :perks, only: [:index, :show, :update]
+  get "search_perks", to: "perks#search", as: :search_perks
   resources :businesses, only: [:index, :show, :new, :create]
 end
