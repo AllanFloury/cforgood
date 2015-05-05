@@ -1,1 +1,37 @@
-<h1>Perk request confirmation</h1>
+<div class="container">
+  <div class="row">
+    <div class="mt-30" id="container-recap">
+      <div class="col-xs-12">
+        <div class="box-recap">
+          <div class="col-xs-4 col-xs-offset-1">
+            <%= image_tag "footer_icon.png", class: "business-logo"%>
+          </div>
+          <div class="col-xs-7 pt-10 pl-5">
+            <h2><%= @perk.title.upcase %></h4>
+            <h4><%= @perk.business.name.capitalize %></h4>
+            <p><i class="fa fa-tag"></i> <%=@perk.business.category.title.capitalize%></p>
+            <%#=image_tag @business.picture.url(:medium), class: "img-circle" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-10 col-xs-offset-1">
+        <h1>Pour bénéficier de ce bon plan :</h1>
+        <div class="box-step">
+          <p>1. Rendez vous au <%=@perk.business.address %></p>
+          <%= simple_form_for(@perk, url: perk_perk_requests_path(@perk, @perk_request), method: :post) do |f| %>
+            <%= f.button :submit, value: "Indique Moi L'itinéraire", class: "btn btn-danger" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="box-step">
+          <p>2. Présentez votre carte de membre :)</p>
+          <%= simple_form_for(@perk, url: perk_perk_requests_path(@perk, @perk_request), method: :post) do |f| %>
+            <%= f.button :submit, value: "Accéder A Ma Carte", class: "btn btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
