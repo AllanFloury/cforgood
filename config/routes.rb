@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: "pages#home"
 
   get "about", to: "pages#about"
@@ -10,9 +11,14 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: 'registrations' }
 
+  resource :user do
+    resources :perk_requests, only: [:index]
+  end
 
   resources :perks, only: [:index, :show, :update]
   get "search_perks", to: "perks#search", as: :search_perks
+
+  # resources :perk_usages, only: [:index, :show]
 
   resources :perks, only: [:index, :show, :update] do
     resources :perk_requests, only: [:show, :new, :create]

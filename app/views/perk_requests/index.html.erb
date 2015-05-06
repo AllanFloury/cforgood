@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="mt-30" id="container-recap">
+      <div class="col-xs-12">
+        <div class="box-recap">
+          <div class="col-xs-7 pt-10 pl-5">
+            <% @perk_requests.each do |perk_request| %>
+            <h3><%= perk_request.perk.title %></h3>
+            <h4><%= perk_request.perk.business.name %></h4>
+            <h4><%= perk_request.perk.business.category.title.capitalize %></h4>
+            <% end %>
+            <p><i class="fa fa-tag"></i> </p>
+            <%#=image_tag @business.picture.url(:medium), class: "img-circle" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
