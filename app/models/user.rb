@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
     styles: { medium: "300x300>", thumb: "100x100>" }
 
   has_many :perk_requests
+  has_many :perk_usages
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
