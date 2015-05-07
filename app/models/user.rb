@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
 
-  has_many :perk_requests
-  has_many :perk_usages
+  has_many :perk_requests, dependent: :destroy
+  has_many :perk_usages, dependent: :destroy
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
@@ -27,9 +27,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  private
-
-  def process_uri(uri)
+  def self.process_uri(uri)
     require 'open-uri'
     require 'open_uri_redirections'
     open(uri, :allow_redirections => :safe) do |r|
