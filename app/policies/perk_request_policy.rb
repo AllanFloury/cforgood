@@ -12,4 +12,8 @@ class PerkRequestPolicy < ApplicationPolicy
   def show?
     record.user == user
   end
+  def index?
+    true
+    record.user == user
+  end
 end

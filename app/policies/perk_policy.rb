@@ -8,4 +8,8 @@ class PerkPolicy < ApplicationPolicy
   def update?
     true
   end
+
+  def search?
+    true
+  end
 end
