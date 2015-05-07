@@ -19,17 +19,16 @@
         <h1>Pour bénéficier de ce bon plan :</h1>
         <div class="box-step">
           <p>1. Rendez vous au <%=@perk.business.address %></p>
-          <%= simple_form_for(@perk, url: perk_perk_requests_path(@perk, @perk_request), method: :post) do |f| %>
-            <%= f.button :submit, value: "Indique Moi L'itinéraire", class: "btn btn-danger" %>
+          <%= link_to "Indique Moi L'itinéraire", "http://maps.google.com/maps", class: "btn btn-danger", id:"link-map", disabled: true, data: { locale: I18n.locale, destination: { latitude: @perk.business.latitude, longitude: @perk.business.longitude } }, :target => "_blank" %>
+          <% content_for(:after_js) do %>
+            <script type="text/javascript">setRoutePathFromLocation()</script>
           <% end %>
         </div>
       </div>
       <div class="col-xs-10 col-xs-offset-1">
         <div class="box-step">
           <p>2. Présentez votre carte de membre :)</p>
-          <%= simple_form_for(@perk, url: perk_perk_requests_path(@perk, @perk_request), method: :post) do |f| %>
-            <%= f.button :submit, value: "Accéder A Ma Carte", class: "btn btn-success" %>
-          <% end %>
+            <%= link_to "Accéder A Ma Carte", mycard_path, class: "btn btn-success" %>
         </div>
       </div>
     </div>
