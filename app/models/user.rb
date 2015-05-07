@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
 
-  has_many :perk_requests
-  has_many :perk_usages
+  has_many :perk_requests, dependent: :destroy
+  has_many :perk_usages, dependent: :destroy
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
@@ -21,9 +21,17 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]  # Fake password for validation
       user.name = auth.info.name
-      user.picture = auth.info.image.gsub('­http', 'htt­ps')
+      user.picture = process_uri(auth.info.image)
       user.token = auth.credentials.token
       user.token_expiry = Time.at(auth.credentials.expires_at)
+    end
+  end
+
+  def self.process_uri(uri)
+    require 'open-uri'
+    require 'open_uri_redirections'
+    open(uri, :allow_redirections => :safe) do |r|
+      r.base_uri.to_s
     end
   end
 end

@@ -13,6 +13,8 @@ gem "pundit"
 gem "paperclip"
 gem "aws-sdk", "< 2.0"
 gem 'omniauth-facebook'
+gem 'open_uri_redirections'
+
 
 gem 'coffee-rails'
 gem "jquery-rails"
@@ -29,9 +31,10 @@ gem 'activeadmin', github: 'activeadmin'
 gem "geocoder"
 gem "gmaps4rails"
 gem "rails-assets-underscore"
+gem "faker"
+
 
 group :development, :test do
-  gem "faker"
   gem "spring"
   gem "annotate"
   gem "binding_of_caller"
