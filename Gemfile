@@ -29,9 +29,10 @@ gem 'activeadmin', github: 'activeadmin'
 gem "geocoder"
 gem "gmaps4rails"
 gem "rails-assets-underscore"
+gem "faker"
+
 
 group :development, :test do
-  gem "faker"
   gem "spring"
   gem "annotate"
   gem "binding_of_caller"
