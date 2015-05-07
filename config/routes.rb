@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
   resource :user do
     resources :perk_requests, only: [:index]
+    post "perk_requests", to: 'perk_requests#mask_perk'
   end
 
   resources :perks, only: [:index, :show, :update]
   get "search_perks", to: "perks#search", as: :search_perks
-
   # resources :perk_usages, only: [:index, :show]
 
   resources :perks, only: [:index, :show, :update] do

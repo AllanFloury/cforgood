@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503142238) do
+ActiveRecord::Schema.define(version: 20150507150000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,10 +84,21 @@ ActiveRecord::Schema.define(version: 20150503142238) do
     t.integer  "perk_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "hidden"
   end
 
   add_index "perk_requests", ["perk_id"], name: "index_perk_requests_on_perk_id", using: :btree
   add_index "perk_requests", ["user_id"], name: "index_perk_requests_on_user_id", using: :btree
+
+  create_table "perk_usages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "perk_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "perk_usages", ["perk_id"], name: "index_perk_usages_on_perk_id", using: :btree
+  add_index "perk_usages", ["user_id"], name: "index_perk_usages_on_user_id", using: :btree
 
   create_table "perks", force: :cascade do |t|
     t.string   "title"
@@ -146,5 +157,7 @@ ActiveRecord::Schema.define(version: 20150503142238) do
   add_foreign_key "businesses", "categories"
   add_foreign_key "perk_requests", "perks"
   add_foreign_key "perk_requests", "users"
+  add_foreign_key "perk_usages", "perks"
+  add_foreign_key "perk_usages", "users"
   add_foreign_key "perks", "businesses"
 end
