@@ -14,7 +14,7 @@ ActiveAdmin.register Business do
     f.actions
   end
 
-  permit_params :name, :email, :category_id, :description, :street, :zipcode, :city, :telephone
+  permit_params :name, :email, :category_id, :description, :street, :zipcode, :city, :telephone, :picture
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
