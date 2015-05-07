@@ -37,7 +37,7 @@ class PerksController < ApplicationController
 
 
   def perk_params
-    params.require(:perk).permit(:title, :details, :state, :business_id)
+    params.require(:perk).permit(:title, :details, :state, :business_id, :picture)
   end
 
 end
