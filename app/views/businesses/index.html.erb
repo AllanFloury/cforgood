@@ -1,6 +1,13 @@
-<div id="map" style="width: 100%; height: 500px;"></div>
+<div class="info-container">
+  <div class="info">
+    <i class="fa fa-refresh fa-spin"></i><br>
+    Recherche de votre position
+  </div>
+</div>
+
+<div id="map" style="width: 100%; height:100%;"></div>
 <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
+  <script>
     $(document).on('ready', function() {
       handler = Gmaps.build('Google');
       GeoMarker = new GeolocationMarker();
@@ -18,10 +25,16 @@
           handler.getMap().setZoom(15);
         });
 
+
       GeoMarker.setMap(handler.getMap());
 
+      setTimeout(function(){
+        $('.info-container').fadeOut()
+      }, 3000)
+
+
     })
-  <% end %>
+  </script>
 <% end %>
 
 <!-- <div class ="search-bar">

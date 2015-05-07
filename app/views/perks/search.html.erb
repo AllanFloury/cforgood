@@ -9,7 +9,7 @@
           <%= select_tag :search_category_id, options_from_collection_for_select(Category.all, :id, :title, params[:search_category_id]), class: 'select_picker' %>
           <%= submit_tag "Filtrer", style: "display:none" %>
         <% end %>
-          <!-- search_category_id : nouvelle donnée our stocker le id récuperer via le filtre , dont (l'id) on passe à la methode search dans le perks_controller -->
+          <!-- search_category_id : nouvelle donnée pour stocker le id récuperer via le filtre , dont (l'id) on passe à la methode search dans le perks_controller -->
 
 
     </div>

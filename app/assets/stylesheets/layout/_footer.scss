@@ -33,3 +33,30 @@
     }
   }
 }
+
+#businesses_index_html {
+  height: 100%;
+  body {
+    height: 100%;
+  }
+
+  .wrap {
+    height: 100%;
+
+    .map {
+      height: 100%;
+    }
+  }
+}
+
+#businesses_index {
+  .footer {
+    display: none;
+  }
+}
+
+#pages_mycard {
+  .footer {
+    display: none;
+  }
+}
