@@ -5,16 +5,15 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>Welcome to CFORGOOD</p>
+
+
     <% if user_signed_in? %>
-      <% if current_user.picture.nil? %>
-        <%= image_tag current_user.picture.url(:medium), class: "img-circle" %>
-        <p><%= current_user.first_name %>
-        <%= current_user.last_name %></p>
-      <% else %>
-        <%= image_tag current_user.picture, class: "img-circle" %>
-        <p><%= current_user.name %></p>
-      <% end %>
+        <%= image_tag (current_user.picture.exists? ? current_user.picture : "profile.png"), class: "img-circle"  %>
+        <p>
+          <%= current_user.first_name %>
+          <%= current_user.last_name %>
+          <%= current_user.name %>
+        </p>
     <% end %>
   </div>
 

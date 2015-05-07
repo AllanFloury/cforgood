@@ -1,20 +1,6 @@
-<!--
-<div id="wrapper">
-  <div class="container">
-    <div class="row macarte relative">
-      <%= image_tag "macarte.png" %>
-    </div>
-    <div class="absolute">
-      <%= current_user.name %>
-      <%= current_user.first_name %>
-      </div>
-  </div>
-</div>
-
- -->
 <div id="wrapper">
   <div class="card relative">
-    <%= image_tag "http://placehold.it/100x100", class: "img-circle", style: "margin:auto;"%>
+    <%= image_tag (current_user.picture.exists? ? current_user.picture : "profile.png"), class: "img-circle", style: "margin:auto;"  %>
 
     <%= image_tag "macarte.png", class: "img-card", style: "margin:auto;"%>
     <h2><%= current_user.first_name%> <%= current_user.last_name%></h2>

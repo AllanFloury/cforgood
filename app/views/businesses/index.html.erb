@@ -1,15 +1,40 @@
-<div id="map" style="width: 100%; height: 500px;"></div>
+<div class="info-container">
+  <div class="info">
+    <i class="fa fa-refresh fa-spin"></i><br>
+    Recherche de votre position
+  </div>
+</div>
+
+<div id="map" style="width: 100%; height:100%;"></div>
 <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
+  <script>
     $(document).on('ready', function() {
       handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {disableDefaultUI: true }, internal: { id: 'map' } }, function(){
+      GeoMarker = new GeolocationMarker();
+      GeoMarker.setCircleOptions({fillColor: '#808080'});
+
+      handler.buildMap({ provider: {disableDefaultUI: true}, internal: { id: 'map' } }, function(){
         markers = handler.addMarkers(<%= raw @markers.to_json %>);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
       });
+
+      google.maps.event.addListenerOnce(GeoMarker, 'position_changed', function() {
+          handler.getMap().setCenter(this.getPosition());
+          handler.getMap().fitBounds(this.getBounds());
+          handler.getMap().setZoom(15);
+        });
+
+
+      GeoMarker.setMap(handler.getMap());
+
+      setTimeout(function(){
+        $('.info-container').fadeOut()
+      }, 3000)
+
+
     })
-  <% end %>
+  </script>
 <% end %>
 
 <!-- <div class ="search-bar">
