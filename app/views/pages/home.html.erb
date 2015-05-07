@@ -6,7 +6,7 @@
         <% @perks.each do |perk| %>
           <%= link_to perk_path(perk) do %>
               <div class="row relative box-white-home" >
-                <div class="bg-image-235" style="background-image: url(<%= image_url perk.image %>); background-position: center center"></div>
+                <div class="bg-image-235" style="background-image: url(<%= image_url perk.picture %>); background-position: center center"></div>
                 <div class="row" id="box-shadow-home">
                   <p><%= perk.business.category.title%></p>
                 </div>
