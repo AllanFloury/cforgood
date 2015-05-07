@@ -9,6 +9,10 @@ class PerkRequestPolicy < ApplicationPolicy
     true
   end
 
+  def mask_perk?
+    true
+  end
+
   def show?
     record.user == user
   end

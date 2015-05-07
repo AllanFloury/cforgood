@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506102148) do
+
+ActiveRecord::Schema.define(version: 20150507150000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(version: 20150506102148) do
     t.integer  "perk_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "hidden"
   end
 
   add_index "perk_requests", ["perk_id"], name: "index_perk_requests_on_perk_id", using: :btree
