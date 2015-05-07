@@ -21,9 +21,19 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]  # Fake password for validation
       user.name = auth.info.name
-      user.picture = auth.info.image#.gsub('­http', 'htt­ps')
+      user.picture = process_uri(auth.info.image)
       user.token = auth.credentials.token
       user.token_expiry = Time.at(auth.credentials.expires_at)
+    end
+  end
+
+  private
+
+  def process_uri(uri)
+    require 'open-uri'
+    require 'open_uri_redirections'
+    open(uri, :allow_redirections => :safe) do |r|
+      r.base_uri.to_s
     end
   end
 end

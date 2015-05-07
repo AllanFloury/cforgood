@@ -13,6 +13,8 @@ gem "pundit"
 gem "paperclip"
 gem "aws-sdk", "< 2.0"
 gem 'omniauth-facebook'
+gem 'open_uri_redirections'
+
 
 gem 'coffee-rails'
 gem "jquery-rails"
