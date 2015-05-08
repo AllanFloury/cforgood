@@ -22,7 +22,7 @@
     <div class="col-xs-12 perk-card-business">
       <% @business.perks.each do |perk| %>
         <%= link_to perk_path(perk) do %>
-          <div class="row relative bg-image-80" style="background-image: url(<%= image_url "Perk1.png" %>); background-position: center center">
+          <div class="row relative bg-image-80" style="background-image: url(<%= image_url @business.perk.image %>); background-position: center center">
               <div class="row box-color-business" style="background-image: url(<%= image_url "colorbar-inverse.png" %>); background-position: center center"></div>
                <div class="index-5 top-55 pl-15 font-white">
                 <p><%= perk.title.upcase %></p>
