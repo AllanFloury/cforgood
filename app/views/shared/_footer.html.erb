@@ -8,6 +8,12 @@
         <% end %>
       </li>
       <li>
+        <%= link_to edit_user_registration_path do %>
+          <%= image_tag "footer_icon.png" %>
+          <p>Mon Profil</p>
+        <% end %>
+      </li>
+      <li>
         <%= link_to perks_path do %>
           <%= image_tag "footer_icon.png" %>
           <p>Bons Plans</p>
@@ -16,13 +22,7 @@
       <li>
         <%= link_to businesses_path do %>
           <%= image_tag "footer_icon.png" %>
-          <p>Commerces</p>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to businesses_path do %>
-          <%= image_tag "footer_icon.png" %>
-          <p>Carte</p>
+          <p>Map</p>
         <% end %>
       </li>
     </ul>
