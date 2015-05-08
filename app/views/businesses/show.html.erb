@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row text-center">
-    <div class="col-xs-12 box-white-business" style="background-image: url(<%= image_url @business.picture %>); background-position: center center">
+    <div class="col-xs-12 box-white-business">
       <div class="box-shadow-business">
         <div class="col-xs-3">
-          <%= image_tag business.picture, class: "business-logo"%>
+          <%= image_tag @business.picture, class: "business-logo"%>
         </div>
         <div class="col-xs-7 pt-10 pl-5">
           <h4><%= @business.name.upcase %></h4>
